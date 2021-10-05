@@ -1,0 +1,8 @@
+north(3)
+right()
+forward(3)
+right()
+forward(4)
+pickUp
+right
+putDown
