@@ -1,0 +1,9 @@
+print("Hello world ")
+print("Hello world ")
+print("Hello world ")
+
+Diubah menjadi
+
+print("Hello world ", end='')
+print("Hello world ", end='')
+print("Hello world ")
