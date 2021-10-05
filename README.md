@@ -1,7 +1,6 @@
-# Robomind-Script
- Robomind Project - Pemrograman Terstruktur
-Task 1 - Follow the line 
-Task 2 - Move the beacon
-Task 3 - Make number 8
-Tugas Sekuensial 01-08
-Tugas Perintah IF dan LOOP
+# Pemrograman-Terstruktur
+
+Repository ini digunakan untuk mempublish project-project yang dikerjakan selama mengikuti perkuliahan Pemrograman Terstruktur di Pendidikan TIK, UNS
+
+NIM   : K3521044
+NAMA  : MOHAMAD YOGA ADITIYA ABDILAH
