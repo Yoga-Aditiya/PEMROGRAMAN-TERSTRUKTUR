@@ -1,0 +1,8 @@
+print("PERBANDINGAN MAHASISWA LAKI LAKI DAN PEREMPUAN")
+
+lakilaki = int(input("Jumlah mahasiswa laki-laki : "))
+perempuan = int(input("Jumlah mahasiswa perempuan : "))
+
+print("========---|GRAFIK|---========")
+print("Laki-laki = ",lakilaki*"[]",{lakilaki})
+print("Perempuan = ", perempuan*"[]",{perempuan})
