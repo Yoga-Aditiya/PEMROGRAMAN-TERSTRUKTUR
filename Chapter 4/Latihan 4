@@ -1,0 +1,43 @@
+print("PROGRAM PYTHON UNTUK MENGHITUNG LAMA PERJALANAN")
+
+def lamaperjalananAB(jarakAB,kecepatanAB,istirahatAB):
+    return (jarakAB/kecepatanAB)*60+istirahatAB
+
+def lamaperjalananBC(jarakBC,kecepatanBC,istirahatBC):
+    return (jarakBC/kecepatanBC)*60+istirahatBC
+
+def Total(TotalAB,TotalBC):
+    return TotalAB+TotalBC
+
+#PERJALANAN DARI KOTA A KE B
+jarakAB = int(input("Masukkan jarak dari kota A ke B : "))
+kecepatanAB = int(input("Masukkan kecepatan dari kota A ke B : "))
+istirahatAB = int(input("Sempet istirahat berapa menit ? : "))
+
+
+#PERJALANAN DARI KOTA B KE C
+jarakBC = int(input("Masukkan jarak dari kota B ke C : "))
+kecepatanBC = int(input("Masukkan kecepatan dari kota B ke C : "))
+istirahatBC = int(input("Sempet istirahat berapa menit ? : "))
+
+TotalAB=lamaperjalananAB(jarakAB,kecepatanAB,istirahatAB)
+TotalBC=lamaperjalananBC(jarakBC,kecepatanBC,istirahatBC)
+
+TotalPerjalanan=Total(TotalAB,TotalBC)
+
+print("Jadi,lama perjalanan dari kota A ke C selama",TotalPerjalanan,"menit")
+print("Atau bisa dibulatkan menjadi ",int(TotalPerjalanan/60),"Jam")
+
+def totalmenit(TotalPerjalanan):
+    return TotalPerjalanan/60 - round(TotalPerjalanan/60)
+
+def waktusampai(waktu,TotalPerjalanan):
+    return waktu+TotalPerjalanan/60
+
+#JAM SAMPAI DI TUJUAN
+waktu =float(input("Masukkan waktu saat pemberangkatan : "))
+
+Totalwaktu=waktusampai(waktu,TotalPerjalanan)
+Totalwaktumenit=totalmenit(TotalPerjalanan)*60
+
+print("Anda sampai pukul : ",round(Totalwaktu),"Jam",round(Totalwaktumenit),"Menit")
