@@ -1,0 +1,27 @@
+print ("_____RENTAL MOBIL HOKYA HOKYA_____")
+def jumlahwaktujam(waktuawaljam,waktuselesaijam):
+    return waktuselesaijam-waktuawaljam-12
+def jumlahwaktumenit(waktuawalmenit,waktuselesaimenit):
+    return waktuselesaimenit-waktuawalmenit
+def total(tarifawal,tarifnormal,WaktuJam,WaktuMenit):
+    return tarifnormal*WaktuJam+tarifnormal*WaktuMenit+tarifawal
+#input data
+tarifawal=int(input("Masukkan tarif awal rental (Rp 200000/12jam): "))
+tarifnormal=int(input("Masukkan tarif tambahan jika lebih dari 12 jam (Rp 10000/jam): "))
+print("Masukkan waktu pengembalian, dengan input jam dan menit dipisah")
+waktuselesaijam=int(input("Jam : "))
+waktuselesaimenit=int(input("Menit : "))
+print("Masukkan waktu peminjaman, dengan input jam dan menit dipisah")
+waktuawaljam=int(input("Jam : "))
+waktuawalmenit=int(input("Menit : "))
+print("Lama Peminjaman =",jumlahwaktujam(waktuawaljam,waktuselesaijam),"jam",jumlahwaktumenit(waktuawalmenit,waktuselesaimenit),"menit","+ 12 jam tarif awal")
+
+WaktuJam=jumlahwaktujam(waktuawaljam,waktuselesaijam)
+Waktumenit=jumlahwaktumenit(waktuawalmenit,waktuselesaimenit)
+WaktuMenit=Waktumenit/60
+Total=total(tarifawal,tarifnormal,WaktuJam,WaktuMenit)
+
+print("Total Biaya Peminjaman = Rp.",Total)
+Bayar=int(input("Jumlah Nominal Uang ="))
+Kembalian= (Bayar-Total)
+print("Uang Kembalian = ", "Rp.",Kembalian)
