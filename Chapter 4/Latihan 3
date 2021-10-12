@@ -1,0 +1,17 @@
+print("PROGRAM PYTHON UNTUK MENGHITUNG PEMAKAIAN BBM")
+
+print("1 Liter untuk 12 kilometer")
+Jarak = int(input("Jarak (KM)= : "))
+Standar = 12
+
+def jumlahliter(Jarak,Standar):
+    return Jarak/Standar
+Total=jumlahliter(Jarak,Standar)
+
+print("Jadi jumlah bensin untuk menempuh", Jarak ,"KM","sebanyak",Total,"liter")
+
+#Kapasitas mobil cuma 50 liter
+if Total>50:
+    Total = int(Total/50+1)
+
+print("Karena kapasitas mobil Pak Budi hanya 50L , maka Pak Budi harus mengisi bensin minimal", Total , "kali")
