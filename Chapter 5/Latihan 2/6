@@ -1,0 +1,28 @@
+import random
+print('==========PERMAINAN TEBAK ANGKA==========')
+print('')
+print('=========================================')
+print('Haloooo kawan...Perkenalkan saya Angka-Man, Tebaklah angka yang saya pilih dari 0 s/d 100')
+angka = random.randint(0,100)
+print('=' * 42)
+print('Score anda 100 , setiap kali salah menebak , akan dikurangi 2')
+print('SEMOGA BERUNTUNG')
+print('=' * 42)
+print('Saya telah memiliki angka, silakan tebak!')
+print('=' * 42)
+print('')
+skor = 100
+while True:
+    tebakan = int(input("\nAyo mau nebak angka berapa ? : "))
+    if tebakan == angka:
+        print('SELAMATTTT ! WAH KAMU CUKUP JAGO YA!')
+        print("Jumlah Score Kamu : " ,skor)
+        break
+    elif tebakan < angka:
+        print('Hahahahaha Terlalu Kecil tuh')
+        print('HAHAHAHAHA SCORE -2')
+        skor = skor - 2
+    else :
+        print('Hahahahaha Terlalu Besar tuh')
+        print('HAHAHAHAHA SCORE -2')
+        skor = skor -2
