@@ -1,0 +1,42 @@
+print("----------PENGECEKKAN GAJI KARYAWAN----------")
+print("=============================================")
+print("Golongan : A , B , C , D")
+print("Kode     : Dua digit angka")
+print("=============================================")
+#INPUT DATA
+kode=int(input("Masukkan kode karyawan   :"))
+nama=(input("Masukkan nama karyawan   :"))
+gol=(input("Masukkan golongan   :"))
+print("")
+
+#PERINCIAN IDENTITAS
+print("=============================================")
+print("~~~~~~~~~STRUK RINCIAN GAJI KARYAWAN~~~~~~~~~")
+print("---------------------------------------------")
+print("NAMA KARYAWAN   :",nama,"(Kode :",kode,")")
+print("GOLONGAN        :",gol)
+
+#PENGGOLONGAN GAJI
+if gol == "A":
+    gajipokok = 10000000
+    potongan = 5/200
+elif gol == "B":
+    gajipokok = 8500000
+    potongan = 2/100
+elif gol == "C":
+    gajipokok = 7000000
+    potongan = 3/200
+elif gol == "D":
+    gajipokok = 5500000
+    potongan = 1/100
+else :
+    print("Golongan tidak ditemukan")
+pot=potongan * gajipokok
+gajibersih=gajipokok - (potongan * gajipokok)
+#PERINCIAN GAJI
+print("---------------------------------------------")
+print("Gaji Pokok   : Rp {:,}".format(int(gajipokok)).replace(',','.'))
+print("Potongan     : Rp {:,}".format(int(pot)).replace(',','.'))
+print("------------------------------------------  -")
+print("Gaji Bersih  : Rp {:,}".format(int(gajibersih)).replace(',','.'))
+print("---------------------------------------------")
