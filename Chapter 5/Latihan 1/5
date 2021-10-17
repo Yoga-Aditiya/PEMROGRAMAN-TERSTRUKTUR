@@ -1,0 +1,71 @@
+print("----------PENGECEKKAN GAJI KARYAWAN----------")
+print("=============================================")
+print("Golongan : A , B , C , D")
+print("Kode     : Dua digit angka")
+print("=============================================")
+#INPUT DATA
+kode=int(input("Masukkan kode karyawan   :"))
+nama=(input("Masukkan nama karyawan   :"))
+gol=(input("Masukkan golongan        :"))
+print("1.Menikah")
+print("2.Belum Menikah")
+stat=int(input("Masukkan status          :"))
+while (stat > 2):
+    print('Maaf input ada yang tidak valid')
+    stat=int(input("Masukkan status          :"))
+if stat == 1:
+      anak=int(input("Masukkan jumlah anak     :"))
+print("")
+
+#PERINCIAN IDENTITAS
+print("=============================================")
+print("~~~~~~~~~STRUK RINCIAN GAJI KARYAWAN~~~~~~~~~")
+print("---------------------------------------------")
+print("NAMA KARYAWAN   :",nama,"(Kode :",kode,")")
+print("GOLONGAN        :",gol)
+print("STATUS MENIKAH  :",stat)
+if stat == 1:
+    print("JUMLAH ANAK     :",anak)
+print("")
+#PENGGOLONGAN GAJI
+if gol == "A":
+    gajipokok = 10000000
+    potongan = 5/200
+    potp = "2,5%"
+elif gol == "B":
+    gajipokok = 8500000
+    potongan = 2/100
+    potp = "2%"
+elif gol == "C":
+    gajipokok = 7000000
+    potongan = 3/200
+    potp = "1,5%"
+elif gol == "D":
+    gajipokok = 5500000
+    potongan = 1/100
+    potp = "1%"
+else :
+    print("Golongan tidak ditemukan")
+
+#RUMUS OPERASI
+tunmenikah=(gajipokok * 10)/100
+tunanak=((gajipokok * 5)/100) * anak
+gator=gajipokok + tunmenikah + tunanak
+pot=potongan * gajipokok
+gajibersih=gator - (potongan * gajipokok)
+
+#PERINCIAN GAJI
+print("---------------------------------------------")
+print("Gaji Pokok              : Rp {:,}".format(int(gajipokok)).replace(',','.'))
+if stat == 1:
+    print("Tunjangan Istri/Suami   : Rp {:,}".format(int(tunmenikah)).replace(',','.'))
+else:
+    print("Tunjangan Istri/Suami   : Rp 0")
+if anak>0:
+    print("Tunjangan Anak          : Rp {:,}".format(int(tunanak)).replace(',','.'))
+print("---------------------------------------------")
+print("Gaji Kotor       : Rp {:,}".format(int(gator)).replace(',','.'))
+print("Potongan (",potp,"): Rp {:,}".format(int(pot)).replace(',','.'))
+print("---------------------------------------------  -")
+print("Gaji Bersih      : Rp {:,}".format(int(gajibersih)).replace(',','.'))
+print("---------------------------------------------")
