@@ -1,0 +1,10 @@
+hitung= 0
+sum = 0
+for x in range (100):
+        if x % 2 == 1:
+            
+            print(x)
+            sum = sum + 1
+            hitung = hitung + x
+print('Banyaknya bilangan ganjil :' + str(sum))
+print('Jumlah bilangan           :' + str(hitung))
