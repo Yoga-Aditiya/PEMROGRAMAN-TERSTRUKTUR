@@ -1,0 +1,41 @@
+print("PENGECEKKAN STATUS KELULUSAN UJIAN MAHASISWA")
+
+#INPUT DATA
+nilaiindo=int(input("Masukkan Nilai Ujian Bahasa Indonesia   :"))
+while(nilaiindo<0):
+    print('Maaf input ada yang tidak valid')
+    nilaiindo=int(input("Masukkan Nilai Ujian Bahasa Indonesia   :"))
+nilaimat=int(input("Masukkan Nilai Ujian Matematika         :"))
+while(nilaimat<0):
+    print('Maaf input ada yang tidak valid')
+    nilaimat=int(input("Masukkan Nilai Ujian Matematika         :"))
+nilaiipa=int(input("Masukkan Nilai Ujian IPA                :"))
+while(nilaiipa<0):
+    print('Maaf input ada yang tidak valid')
+    nilaiipa=int(input("Masukkan Nilai Ujian IPA                :"))
+
+#PENGECEKKAN NILAI
+if nilaiindo <= 60:
+             print('STATUS KELULUSAN                        : TIDAK LULUS')
+elif nilaiipa <= 60:
+             print('STATUS KELULUSAN                        : TIDAK LULUS')
+elif nilaimat < 70:
+             print('STATUS KELULUSAN                        : TIDAK LULUS')
+else:
+    print('STATUS KELULUSAN                        : LULUS')
+
+#PENYEBAB TIDAK LULUS
+if nilaiindo <= 60:
+             print('Sebab                        :')
+elif nilaiipa <= 60:
+             print('Sebab                        :')
+elif nilaimat < 70:
+             print('Sebab                        :')
+
+#PENJABARAN PENYEBABNYA
+if nilaiindo <= 60:
+             print('-	Nilai bahasa indonesia kurang dari 60')
+if nilaiipa <= 60:
+             print('-	Nilai IPA kurang dari 60')
+if nilaimat < 70:
+             print('-	Nilai Matematika kurang dari 70')
