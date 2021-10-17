@@ -1,0 +1,16 @@
+print("PENGECEKKAN STATUS KELULUSAN UJIAN MAHASISWA")
+
+#INPUT DATA
+nilaiindo=int(input("Masukkan Nilai Ujian Bahasa Indonesia   :"))
+nilaimat=int(input("Masukkan Nilai Ujian Matematika         :"))
+nilaiipa=int(input("Masukkan Nilai Ujian IPA                :"))
+
+#PENGECEKKAN NILAI
+if nilaiindo <= 60:
+             print('STATUS KELULUSAN                        : TIDAK LULUS')
+elif nilaiipa <= 60:
+             print('STATUS KELULUSAN                        : TIDAK LULUS')
+elif nilaimat < 70:
+             print('STATUS KELULUSAN                        : TIDAK LULUS')
+else:
+    print('STATUS KELULUSAN                        : LULUS')
