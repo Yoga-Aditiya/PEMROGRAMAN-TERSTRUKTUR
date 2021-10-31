@@ -1,0 +1,19 @@
+def faktorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * faktorial(n-1)
+faktorial(10)
+#SOAL A
+print('C(5,3)')
+print('C = 5!/(5-3)!3!')
+
+print('C =',faktorial(5),'/',faktorial(2),'*',faktorial(3))
+print('C =',faktorial(5)/(faktorial(2)*faktorial(3)))
+
+#SOAL B
+print('P(10,7)')
+print('P = 10!/(10-7)!')
+
+print('P =',faktorial(10),'/',faktorial(3))
+print('P =',faktorial(10)/faktorial(3))
