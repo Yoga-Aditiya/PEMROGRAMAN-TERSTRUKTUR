@@ -1,0 +1,44 @@
+#FUNGSI SUM
+def jumlah_total(daftar_nilai):
+    z=0;
+    x = daftar_nilai
+    jml = len(x)
+
+    for i in range(jml):
+        y = x[i]
+        z+=y
+  
+    return z
+#print(jumlah_total([daftar_nilai]))
+
+#FUNGSI AVERAGE
+def ratarata(daftar_bilangan):
+    jumlahbilangan = 0
+    for t in daftar_bilangan:
+        jumlahbilangan = jumlahbilangan + t           
+
+    rata = jumlahbilangan / len(daftar_bilangan)
+    return rata
+#print(ratarata([daftar_bilangan]))
+
+#FUNGSI MAKS
+def nilai_maksimal(deret_bilangan):
+  nilai_terbesar = deret_bilangan[0]
+
+  for nilai in deret_bilangan:
+    if nilai > nilai_terbesar:
+      nilai_terbesar = nilai
+
+  return nilai_terbesar
+#nilai_maksimal(deret_bilangan)
+
+#FUNGSI MIN
+def nilai_minimal(deret_bilangan):
+  nilai_terkecil = deret_bilangan[0]
+
+  for nilai in deret_bilangan:
+    if nilai < nilai_terkecil:
+      nilai_terkecil = nilai
+
+  return nilai_terkecil
+#nilai_minimal(deret_bilangan)
