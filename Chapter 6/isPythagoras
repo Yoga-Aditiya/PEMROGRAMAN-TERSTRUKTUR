@@ -1,0 +1,11 @@
+from math import sqrt
+def isPythagoras(a,b,c):
+    if c == sqrt(a*a + b*b):
+        print(True)
+    else:
+        print(False)
+
+a = int(input("Masukkan "))
+b = int(input("Masukkan "))
+c = int(input("Masukkan "))
+isPythagoras(a,b,c)
