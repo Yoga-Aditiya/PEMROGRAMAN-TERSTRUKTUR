@@ -1,0 +1,18 @@
+from statistik import*
+
+#SOAL A
+print('JAWABAN SOAL A')
+print('a = 5,10,4,9,30,16,2,11')
+a = 5,10,4,9,30,16,2,11
+print('Rata-rata dari bilangan a adalah      : ',ratarata(a))
+print('Nilai maksimal dari bilangan a adalah : ',nilai_maksimal(a))
+print('Nilai minimal dari bilangan a adalah  : ',nilai_minimal(a))
+print('')
+
+#SOAL B
+print('JAWABAN SOAL B')
+print('b = 81,98,12,83,45,77,69,30,56')
+b = 81,98,12,83,45,77,69,30,56
+print('Rata-rata dari bilangan b adalah      : ',ratarata(b))
+print('Nilai maksimal dari bilangan b adalah : ',nilai_maksimal(b))
+print('Nilai minimal dari bilangan b adalah  : ',nilai_minimal(b))
