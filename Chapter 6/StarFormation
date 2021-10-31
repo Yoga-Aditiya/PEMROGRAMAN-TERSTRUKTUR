@@ -1,0 +1,25 @@
+def starFunction1(jumlah):
+    jumlah
+    string = ''
+    bar = 1
+
+    while bar <= jumlah:
+        kol = bar
+        while kol > 0:
+            print('*', end='')
+            kol -= 1
+        print('')
+        bar += 1
+
+def starFunction2(bar):
+    bar
+    string = ''
+    while bar >= 0:
+        kol = bar
+        while kol > 0:
+            string = string + '*'
+            kol -= 1
+        string = string + '\n'
+        bar -= 1
+    print(string)
+starFunction1(4),starFunction2(3)
