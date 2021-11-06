@@ -1,0 +1,25 @@
+x = 0
+jum = 0
+i = 0
+terus =  True
+while terus:
+    try:
+        x = int(input("Masukkan bilangan bulat : "))
+        cek = input("Lagi (y/n) ? : ")
+
+        while cek == 'y':
+            i += 1
+            jum += x
+            x = int(input("Masukkan bilangan bulat : "))
+            cek = input("Lagi (y/n) ? : ")
+        if cek == 'n':
+            i += 1
+            jum += x
+            rata = jum/i
+            print("Rata-ratanya adalah : ", rata)
+            break
+        if cek != 'n' or 'y':
+            print("Keyword salah")
+            break
+    except ValueError:
+        print("BukanBilanganBulat")
