@@ -1,0 +1,8 @@
+while True:
+    try:
+        namafile = input("Masukkan nama file : ")
+        file = open(namafile,"r")
+        print(file.readlines())
+    except FileNotFoundError:
+        print("Tidak ada file yang dimaksud")
+        continue
