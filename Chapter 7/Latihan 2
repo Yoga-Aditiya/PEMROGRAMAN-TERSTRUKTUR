@@ -1,0 +1,34 @@
+try:
+    def judul():
+        print("Selamat datang di Program Edit Teks")
+        print("===================================")
+    def file():
+        global namafile
+        namafile = input("Masukkan nama file : ")
+    def fungsi():
+        file = open(namafile,"r")
+        print(file.readlines())
+        data = input("Data yang mau ditambahkan ? ")
+        file = open(namafile,"a")
+        file.write(data)
+        file.close()
+    def sunting():
+        global edit
+        edit = input("Apakah masih ada yang ingin ditambahkan ? (y/n) ")
+    n = False
+    judul()
+    file()
+    while True:
+        fungsi()
+        sunting()
+        if edit == 'y':
+            fungsi()
+            sunting()
+        if edit == 'n':
+            print("Terimakasih sudah menggunakan program ini")
+            break
+        else:
+            print("keyword yang anda masukkan salah")
+            break
+except FileNotFoundError:
+    print("Tidak ada file ","(",namafile,")","di Device ini")
