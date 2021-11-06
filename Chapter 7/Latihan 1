@@ -6,3 +6,4 @@ while True:
     except FileNotFoundError:
         print("Tidak ada file yang dimaksud")
         continue
+    break
