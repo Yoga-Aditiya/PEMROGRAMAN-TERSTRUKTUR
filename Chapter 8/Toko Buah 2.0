@@ -1,0 +1,21 @@
+buah = {'apel' : 5000, 'jeruk' : 8500, 'mangga' : 7800, 'duku' : 6500}
+tmp = max(buah['apel'], buah['jeruk'], buah['mangga'], buah['duku'])
+tmp
+print('')
+for i in buah:
+    print(i)
+print('')
+for i in buah:
+    print(buah[i])
+print('')
+print("Maka buah yang paling mahal adalah : ")
+for i in buah:
+    if tmp == buah[i]:
+        print(i)
+print('')
+print('Rata-rata harga dari keseluruhan buah adalah :')
+sum = 0
+for i in buah:
+    sum = sum + buah[i]
+rata = sum/len(buah)
+print(rata)
