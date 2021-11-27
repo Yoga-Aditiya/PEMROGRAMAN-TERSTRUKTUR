@@ -1,0 +1,27 @@
+print("==============================================================")
+print("NIM       NAMA MAHASISWA        TGL LAHIR         TEMPAT LAHIR")
+print("--------------------------------------------------------------")
+
+mhs = ['K001:ROSIHAN ARI:1979-09-01:SOLO','K002:DWI AMALIA FITRIANI:1979-09-17:KUDUS','K003:FAZA FAUZAN:2005-01-28:KARANGANYAR']
+data = str(mhs).split(':')
+
+waktuR = '/'.join(reversed((data[2]).split('-')))
+waktuD = '/'.join(reversed((data[5]).split('-')))
+waktuF = '/'.join(reversed((data[8]).split('-')))
+
+print(str(mhs)[2:6].ljust(10),end='')
+print((data[1]).ljust(22),end='')
+print(waktuR.ljust(18),end='')
+print(data[3][0:4])
+
+print(str(mhs)[38:42].ljust(10),end='')
+print((data[4]).ljust(22),end='')
+print(waktuD.ljust(18),end='')
+print(data[6][0:5])
+
+print(str(mhs)[83:87].ljust(10),end='')
+print((data[7]).ljust(22),end='')
+print(waktuF.ljust(18),end='')
+print(data[9][0:11])
+
+print("--------------------------------------------------------------")
