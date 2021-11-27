@@ -1,0 +1,26 @@
+buah = {'apel' : 5000, 'jeruk' : 8500, 'mangga' : 7800, 'duku' : 6500}
+bayar = []
+def beli():
+    while True:
+        global harga,banyak,namabuah
+        print("--------------------------")
+        namabuah = input("Masukkan nama buah : ")
+        banyak = int(input("Masukkan berapa kg buah : "))
+        
+        harga = buah[namabuah]
+        total = harga*banyak
+        print("Harga", banyak, "kg", namabuah, "adalah : ", total)
+        bayar.append(total)
+        
+        lagi = input("Beli buah lagi ?(y/n) : ")
+        print('')
+        if lagi in ("N","n"):
+            break
+def pembayaran():
+    print("--------------------------")
+    jumlah = sum(bayar)
+    print("Total seluruh pembelanjaan adalah : ", jumlah)
+    print("--------------------------")
+    
+beli()
+pembayaran()
