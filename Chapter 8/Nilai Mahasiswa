@@ -1,0 +1,15 @@
+for i in range(len(nilaiMhs)):
+    mhs=dict(nilaiMhs[i])
+    nilaifinal = ((mhs['uas']*2 + mhs['mid'])/3)
+    del mhs['uas']
+    del mhs['mid']
+    mhs['nilaiakhir']=nilaifinal
+    print(mhs)
+budi = 73
+amir = 70
+cici = 50
+dedi = 26
+fifi = 50
+list_data = [73,70,50,26,50]
+nilaimaks = max(list_data)
+print("Nilai akhir terbesar terdapat di ", nilaimaks)
