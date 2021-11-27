@@ -1,0 +1,72 @@
+buah = {'apel' : 5000, 'jeruk' : 8500, 'mangga' : 7800, 'duku' : 6500}
+bayar = []
+def menu():
+    print("SELAMAT DATANG DI MENU PEMBELANJAAN BUAH")
+    print("1. Tambah data Buah")
+    print("2. Beli buah")
+    print("3. Hapus data Buah")
+    print('')
+    pilih = int(input("Masukkan pilihan anda : "))
+    if pilih == 1 :
+        inputbuah()
+        menu()
+    elif pilih == 2 :
+        beli()
+        pembayaran()
+    elif pilih == 3 :
+        hapusbuah()
+        
+def hapusbuah():
+    print("Data buah : ")
+    for key,val in buah.items():
+        print("%s = %s" %(key,val))
+    hapus = input("Masukkan nama buah yang akan dihapus : ")
+    if hapus in buah:
+        del buah[hapus]
+        print("Data buah : ")
+        for key,val in buah.items():
+            print("%s = %s" %(key,val))
+        print('')
+        print("Data buah", hapus, "sudah terhapus")
+        menu()
+    else:
+        print("Buah yang dimaksudkan tidak terdaftar")
+        hapusbuah()
+        
+        
+def inputbuah():
+    nama = input("Masukkan nama buah yang ingin ditambahkan : ")
+    if nama in buah:
+        print("Buah sudah terdaftar")
+        print(listbuah)
+        inputbuah()
+    else:
+        hargabaru = int(input("Masukkan harga satuannya : "))
+        buah[nama] = hargabaru
+        print("Data buah : ")
+        for key,val in buah.items():
+            print("%s = %s" %(key,val))
+        
+def beli():
+    while True:
+        global harga,banyak,namabuah
+        print("--------------------------")
+        namabuah = input("Masukkan nama buah : ")
+        banyak = int(input("Masukkan berapa kg buah : "))
+        
+        harga = buah[namabuah]
+        total = harga*banyak
+        print("Harga", banyak, "kg", namabuah, "adalah : ", total)
+        bayar.append(total)
+        
+        lagi = input("Beli buah lagi ?(y/n) : ")
+        print('')
+        if lagi in ("N","n"):
+            break
+def pembayaran():
+    print("--------------------------")
+    jumlah = sum(bayar)
+    print("Total seluruh pembelanjaan adalah : ", jumlah)
+    print("--------------------------")
+    
+menu()
