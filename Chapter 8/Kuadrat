@@ -1,0 +1,17 @@
+bil = [2, 4, 5, 6]  
+hasil = kuadrat(bil)
+sehingga isi dari hasil berupa list dalam bentuk [4, 16, 25, 36]
+def kuadrat(bil):
+    data = []
+    hasil=[]
+    stop = False
+    while (not stop):
+        bil = int(input("Masukkan angka (Contoh : 2, 4, 6) : "))
+        data.append(bil)
+        hasil.append(bil**2)
+        tanya = input("Mau isi lagi?(y/t): ")
+        if(tanya == "t"):
+            stop = True
+            print("Angka yang dimasukkan :", data)
+            print("Hasil kuadratnya      :", hasil)
+kuadrat(bil)
