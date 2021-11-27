@@ -1,0 +1,40 @@
+sayur = ['bayam', 'kangkung', 'wortel', 'selada']
+def pilih1():
+    tambahan = input("Masukkan nama sayur : ")
+    sayur.append(tambahan)
+def pilih2():
+    try:
+        hapus = str(input("Masukkan nama sayur yang akan dihapus : "))
+        sayur.remove(hapus)
+    except:
+        print("Nama sayur tidak ditemukan")
+def pilih3():
+    print(sayur)
+def pilih4():
+    print("terimakasih")
+    quit()
+def menu():
+    print("Menu Aplikasi Pendataan Jumlah Sayur-Sayuran")
+    print("--------------------------------------------")
+    print("Sayur yang terdata : ", sayur)
+    print("1. Tambah data sayur")
+    print("2. Hapus data sayur")
+    print("3. Tampilkan data sayur")
+    print("4. Keluar")
+    print('')
+    pilih = int(input("Masukkan pilihan anda : "))
+    if pilih == 1 :
+        pilih1()
+        menu()
+    elif pilih == 2:
+        pilih2()
+        menu()
+    elif pilih == 3:
+        pilih3()
+        menu()
+    elif pilih == 4:
+        pilih4()
+    else:
+        print("Perintah salah !")
+        menu()
+menu()
