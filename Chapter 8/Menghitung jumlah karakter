@@ -1,0 +1,19 @@
+data = []
+karakter =[]
+def inputnama():
+    while True:
+        global nama
+        nama = input("Masukkan nama mahasiswa : ")
+        data.append(nama)
+        karakter.append(len(nama))
+        lagi = input("Masukkan data lagi ? (y/n) : ")
+        
+        if lagi in ("N","n"):
+            break
+def hasil():
+    print("--------------------------")
+    for i in range(len(data)):
+        print(data[i], "(", karakter[i], "karakter )")
+        print("--------------------------")
+inputnama()
+hasil()
