@@ -1,0 +1,38 @@
+buah = {'apel' : 5000, 'jeruk' : 8500, 'mangga' : 7800, 'duku' : 6500}
+def beli():
+    global beli
+    global jumlah
+    beli = input("Masukkan nama buah yang akan dibeli : ")
+    jumlah = int(input("Masukkan berapa kg yang akan dibeli : "))
+    if beli == 'apel':
+        total = 5000*jumlah
+        print("Total harga : ",total)
+    elif beli == 'jeruk':
+        total = 8500*jumlah
+        print("Total harga : ",total)
+    elif beli == 'mangga':
+        total = 7800*jumlah
+        print("Total harga : ",total)
+    elif beli == 'duku':
+        total = 6500*jumlah
+        print("Total harga : ",total)
+    quit()
+        
+def menu():
+    print("Menu Pembelian Buah-Buahan Segar dan Murah")
+    print("------------------------------------------")
+    print("DAFTAR HARGA BUAH - BUAHAN")
+    print("apel   : 5000")
+    print("jeruk  : 8500")
+    print("mangga : 7800")
+    print("duku   : 6500")
+    print("------------------------------------------")
+    print("1.Beli")
+    print("2.Tidak jadi beli")
+    pilih = int(input("Masukkan pilihan anda : "))
+    if pilih == 1 :
+        beli()
+        quit()
+    elif pilih == 2:
+        quit()
+menu()
