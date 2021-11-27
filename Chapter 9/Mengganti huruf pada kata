@@ -1,0 +1,4 @@
+def ubahHuruf(teks, a, b):
+    for i in range (len(teks)):
+        hasil = teks.replace(a,b)
+    print(hasil)
