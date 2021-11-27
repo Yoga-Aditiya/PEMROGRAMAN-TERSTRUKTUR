@@ -1,0 +1,7 @@
+angka = []
+banyak = int(input("Masukkan banyak bilangan yang dibutuhkan : "))
+for i in range(banyak):
+    bil = randint(-999, 999)
+    angka.append(bil)
+angka.sort(reverse=True)
+print(angka)
