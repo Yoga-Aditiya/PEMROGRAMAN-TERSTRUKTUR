@@ -1,0 +1,6 @@
+import random
+def shuffleString(x,n):
+    for i in range(n):
+        hasil = ''.join(random.sample(x,len(x)))
+        teks = hasil.split()
+        print(teks,end='')
