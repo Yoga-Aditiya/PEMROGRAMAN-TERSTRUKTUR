@@ -1,0 +1,22 @@
+dlist = []
+def data():
+    global myData
+    myData = input('masukan list bilangan, pisahkan dengan tanda koma. contoh: 1,2,3,dst : ')
+    dlist.append(myData)
+def sortStringByChar(daftar_input):
+    dlist.sort()
+    print(dlist)
+def menu():
+    print("Ingin Menambah Data ? ")
+    print("1. Tambah")
+    print("2. Cukup")
+    print('')
+    pilih = int(input("Masukkan pilihan anda : "))
+    if pilih == 1 :
+        data()
+        menu()
+    elif pilih == 2:
+        sortStringByChar(dlist)
+myData = input('masukan list bilangan, pisahkan dengan tanda koma. contoh: 1,2,3,dst : ')
+dlist.append(myData)
+menu()
