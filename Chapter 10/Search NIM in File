@@ -1,0 +1,21 @@
+dataFile = open("D:\Mahasiswa.txt","r+")
+data = dataFile.readlines()
+Cari = input("Masukkan NIM yang mau dicari : ")
+def cek():
+    found = False
+    for line in data:
+        if Cari in line:
+            return True
+    return False
+cek()
+if cek():
+    print("Data ditemukan")
+    for line in data:
+        if Cari in line:
+            isi = line.split("|")
+            print("NIM      : ",isi[0])
+            print("NAMA     : ",isi[1])
+            print("ALAMAT   : ",isi[2])
+else:
+    print("Maaf,Data dengan NIM :",Cari,"Tidak ditemukan")
+dataFile.close()
