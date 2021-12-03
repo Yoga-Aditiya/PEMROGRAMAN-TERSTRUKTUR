@@ -1,0 +1,12 @@
+dataFile = open("D:\Chr.txt","r+")
+
+#Nilai n yang diketahui adalah 2
+N = 2
+while True:
+    karakter = dataFile.read(1)
+    if not karakter:
+        break
+    else:
+        huruf = [chr(ord(ch)-N)for ch in karakter]
+        hasil = ''.join(huruf)
+        print(hasil,end='')
