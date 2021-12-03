@@ -1,0 +1,19 @@
+dataFile = open("D:\Mahasiswa.txt","w+")
+
+HasilList = []
+
+#Penginputan
+while True:
+    nim = input("Masukkan NIM      : ")
+    nama = input("Masukkan Nama     : ")
+    alamat = input("Masukkan Alamat   : ")
+    teks = (nim,nama,alamat)
+    data =('|'.join(teks))
+    space = ("\n")
+    dataFile.write(data)
+    dataFile.write(space)
+    lagi = input("Masukkan data lagi ? (y/n) : ")
+
+    if lagi in ("N","n"):
+        dataFile.close()
+        break
