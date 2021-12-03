@@ -1,0 +1,23 @@
+myAngka = open('D:\Angka.txt','r+')
+angkalist = []
+Num = []
+genap = 0
+ganjil = 0
+data = myAngka.readlines()
+for i in range(len(data)):
+    pecahData =data[i].split('\n')
+    angkalist.append(pecahData)
+    angka =(angkalist[i][0])
+    Num.append(angka)
+    
+for i in range(len(Num)):
+    if int(Num[i]) % 2== 0:
+        genap += 1
+    else :
+        ganjil += 1
+sGenap = "Jumlah angka genap adalah : ",genap
+sGanjil = "Jumlah angka ganjil adalah : ",ganjil
+print(sGenap)
+print(sGanjil)
+
+myAngka.close()
