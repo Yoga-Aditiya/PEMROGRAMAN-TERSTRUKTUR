@@ -1,0 +1,10 @@
+dataFile = open("D:\penjumlahan.txt","r+")
+baris = dataFile.readlines()
+for line in baris:
+    data = line.split("|")
+    hasil = '+'.join(data)
+    soal = hasil.replace("\n","")
+    bil1=int(soal[0]+soal[1])
+    bil2=int(soal[3]+soal[4])
+    jawab =(bil1+bil2)
+    print(soal,"=",jawab)
