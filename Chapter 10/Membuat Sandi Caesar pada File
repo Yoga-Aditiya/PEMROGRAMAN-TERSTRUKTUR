@@ -1,0 +1,10 @@
+dataFile = open("D:\Caesar.txt","r+")
+jarak = int(input("Masukkan perubahan langkah ord() : "))
+while True:
+    karakter = dataFile.read(1)
+    if not karakter:
+        break
+    else:
+        huruf =[chr(ord(ch)+jarak)for ch in karakter]
+        hasil =''.join(huruf)
+        print(hasil,end='')
