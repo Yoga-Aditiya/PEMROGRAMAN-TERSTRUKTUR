@@ -1,0 +1,13 @@
+dataFile = open("D:\Mahasiswa.txt","r")
+
+dataList = []
+data = dataFile.readlines()
+
+for i in range(len(data)):
+    pecahData = data[i].split("|")
+    dataDict={"Nim":pecahData[0],"Nama":pecahData[1],"Alamat":pecahData[2]}
+    dataList.append(dataDict)
+
+print(dataList)
+
+dataFile.close()
