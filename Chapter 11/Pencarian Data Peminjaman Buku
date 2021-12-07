@@ -1,0 +1,41 @@
+from datetime import datetime,timedelta,date
+dataFile = open("D:\DaftarPinjam.txt","r+")
+data = dataFile.readlines()
+Cari = input("Masukkan Kode Member yang mau dicari : ")
+
+def cek():
+    found = False
+    for line in data:
+        if Cari in line:
+            return True
+    return False
+cek()
+if cek():
+    print("Data ditemukan")
+    for line in data:
+        if Cari in line:
+            isi = line.split("|")
+            hariini = datetime.now()
+            d0 = hariini.strftime('%Y-%m-%d')
+            haripinjam = datetime.strptime(isi[3],'%Y-%m-%d')
+            telat = (hariini-haripinjam-timedelta(days=7)).days
+            denda = telat*2000
+            
+            print("Kode Member                : ",isi[0])
+            print("Nama Member                : ",isi[1])
+            print("Judul Buku                 : ",isi[2])
+            print("Tanggal Peminjaman         : ",isi[3])
+            print("Tanggal Maks Pengembalian  : ",isi[4])
+            print("Dikembalikan pada          : ",d0)
+            if telat > 7:
+                print("Jumlah Keterlambatan       : ",telat,"hari")
+                print("Denda                      :  Rp ",denda)
+                dataFile.close()
+            else:
+                print("Tidak ada Keterlambatan, Tidak ada denda :)")
+                dataFile.close()
+            
+            
+else:
+    print("Maaf,Data dengan Kode Member :",Cari,"Tidak ditemukan")
+dataFile.close()
