@@ -1,0 +1,25 @@
+from datetime import datetime
+from datetime import timedelta,date
+dataFile = open("D:\DaftarPinjam.txt","w+")
+HasilList = []
+
+while True:
+    #PENGINPUTAN
+    kode = input("Masukkan Kode Member : ")
+    nama = input("Masukkan Nama Member : ")
+    buku = input("Masukkan Judul Buku  : ")
+    tglpinjam = datetime.now()
+    tglkembali = tglpinjam + timedelta(days=7)
+    d0 = tglpinjam.strftime('%Y-%m-%d')
+    d1 = tglkembali.strftime('%Y-%m-%d')
+    #INSERT DATA
+    teks = (kode,nama,buku,d0,d1)
+    data = ('|'.join(teks))
+    space = ("\n")
+    dataFile.write(data)
+    dataFile.write(space)
+    lagi = input("Tambah data ? (y/n) : ")
+
+    if lagi in ("N","n"):
+        dataFile.close()
+        break
